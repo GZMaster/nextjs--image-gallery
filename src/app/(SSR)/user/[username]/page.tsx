@@ -1,6 +1,7 @@
 import { cache } from "react";
 import { notFound } from "next/navigation";
 import { UnsplashUser } from "@/models/unsplash-user";
+import { Alert } from "@/components/bootstrap";
 
 interface PageProps {
 	params: { username: string };
@@ -38,6 +39,9 @@ export default async function Page({ params: { username } }: PageProps) {
 
 	return (
 		<div>
+			<Alert>
+				This page <strong>generateMetadata</strong> to set the page title
+			</Alert>
 			<h1>{user.username}</h1>
 			<p>First name: {user.first_name}</p>
 			<p>Last name: {user.last_name}</p>

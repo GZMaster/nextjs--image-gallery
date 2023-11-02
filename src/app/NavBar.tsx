@@ -41,6 +41,13 @@ export default function NavBar() {
 							<NavDropdown.Item as={Link} href="/topics/birds">
 								birds
 							</NavDropdown.Item>
+							<Nav.Link
+								as={Link}
+								href="/search"
+								active={pathName === "/search"}
+							>
+								search
+							</Nav.Link>
 						</NavDropdown>
 					</Nav>
 				</Navbar.Collapse>
